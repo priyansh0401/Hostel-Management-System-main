@@ -23,12 +23,12 @@ const IssueDisplay = ({email,password}) => {
         let id = userInfo._id
         id= String(id)
 
-        const res = await fetch(`https://hms-backend-89o3.onrender.com/issues/${String(id)}`).then((res)=>res.json()).then((data)=>setIssueInfo(data))
+        const res = await fetch(`https://hostel-management-system-backend-master-tanya.vercel.app/issues/${String(id)}`).then((res)=>res.json()).then((data)=>setIssueInfo(data))
         
     }
 
     async function getUserDetails(){
-        const res = await axios.get(`https://hms-backend-89o3.onrender.com/users/${email}`,{
+        const res = await axios.get(`https://hostel-management-system-backend-master-tanya.vercel.app/users/${email}`,{
             headers:{
                 'Content-Type': 'application/json',
             }
